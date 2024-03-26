@@ -19,10 +19,10 @@ export default class CalendarPicker extends Component {
       currentYear: null,
       currentView: props.currentView || 'years',
       actionType: props.actionType || null,
-      selectedStartDate: props.selectedStartDate && moment(props.selectedStartDate),
-      selectedEndDate: props.selectedEndDate && moment(props.selectedEndDate),
-      minDate: props.minDate && moment(props.minDate),
-      maxDate: props.maxDate && moment(props.maxDate),
+      selectedStartDate: props.selectedStartDate ? props.selectedStartDate : moment(props.selectedStartDate),
+      selectedEndDate: props.selectedEndDate ? props.selectedEndDate : moment(props.selectedEndDate),
+      minDate: props.minDate ? props.minDate : moment(props.minDate),
+      maxDate: props.maxDate ? props.maxDate : moment(props.maxDate),
       onSelectMonth: props.onSelectMonth,
       styles: {},
       ...this.updateScaledStyles(props),
@@ -340,8 +340,20 @@ export default class CalendarPicker extends Component {
     });
   }
 
-  handleOnPressMonth = () => {
-    console.log('hola');
+  handleOnPressMonth = ({ month, year }) => {
+    const currentYear = year;
+    const currentMonth = month;
+    const scrollableState = this.props.scrollable ? {
+      ...this.createMonths(this.props, { currentYear, currentMonth }),
+    } : {};
+
+    const extraState = {
+      renderMonthParams: { ...this.state.renderMonthParams, month, year },
+      currentView: this.state.actionType === 'monthView' ? 'months' : 'days',
+      ...scrollableState,
+    };
+    this.state.onSelectMonth({ month, year, });
+    this.handleOnPressFinisher({ month, year, extraState });
     this.setState({
       currentView: 'months'
     });
@@ -359,7 +371,6 @@ export default class CalendarPicker extends Component {
       currentView: this.state.actionType === 'monthView' ? 'months' : 'days',
       ...scrollableState,
     };
-    this.state.onSelectMonth({ month, year, });
     this.handleOnPressFinisher({ month, year, extraState });
   }
 
@@ -469,7 +480,6 @@ export default class CalendarPicker extends Component {
       renderMonthParams,
       initialScrollerIndex,
     } = this.state;
-
     const {
       startFromMonday,
       firstDay,
@@ -510,7 +520,7 @@ export default class CalendarPicker extends Component {
             months={months}
             minDate={minDate}
             maxDate={maxDate}
-            onSelectMonth={this.handleOnSelectMonthYear}
+            onSelectMonth={this.handleOnPressMonth}
             headingLevel={headingLevel}
           />
         );
