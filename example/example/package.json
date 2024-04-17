@@ -19,7 +19,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.5",
-    "react-native-calendar-picker": "file:../",
+    "rn-calendar-picker": "file:../",
     "react-native-web": "~0.19.6",
     "recyclerlistview": "~3.0.0"
   },

@@ -4,7 +4,7 @@ import { Button } from './src/components/Button';
 import { CalendarView } from './src/components/CalendarView';
 import { colors } from './src/global/colors';
 
-// Types erros will be fix when "react-native-calendar-picker" accepts PR
+// Types erros will be fix when " accepts PR
 
 export default function App() {
   const [selectedStartDate, setSelectedStartDate] = useState(new Date())

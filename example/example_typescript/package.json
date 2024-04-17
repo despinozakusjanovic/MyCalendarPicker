@@ -1,7 +1,7 @@
 {
   "name": "react-native-calendar-picker-ui-example",
   "version": "1.0.0",
-  "description": "A simple implementation of react-native-calendar-picker with a nice ui.",
+  "description": "A simple implementation of rn-calendar-picker with a nice ui.",
   "main": "node_modules/expo/AppEntry.js",
   "author": "Aroldo Goulart <aroldogooulart@gmail.com>",
   "keywords": [
@@ -30,7 +30,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
-    "react-native-calendar-picker": "^7.1.2",
+    "rn-calendar-picker": "^7.1.2",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
     "typescript": "~4.0.0",
-    "@types/react-native-calendar-picker": "^7.0.1"
+    "@types/rn-calendar-picker": "^7.0.1"
   },
   "private": false
 }
