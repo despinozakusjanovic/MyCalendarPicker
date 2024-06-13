@@ -17,10 +17,6 @@
     "lint": "eslint CalendarPicker --fix",
     "postinstall": "node-git-hooks"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stephy/CalendarPicker"
-  },
   "keywords": [
     "calendar",
     "picker",
@@ -35,11 +31,6 @@
     "name": "Stephani Alves",
     "email": "alves@stephanimoroni.com"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/stephy/CalendarPicker/issues"
-  },
-  "homepage": "https://github.com/stephy/CalendarPicker",
   "maintainers": [
     {
       "name": "stephy",
