@@ -1,7 +1,7 @@
 {
   "name": "rn-calendar-picker",
-  "version": "8.0.2",
-  "description": "Calendar Picker Component for React Native",
+  "version": "1.0.0",
+  "description": "Component for React Native",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -10,11 +10,11 @@
     "react": "*",
     "react-native": "*"
   },
-  "main": "./CalendarPicker",
+  "main": "./index.js",
   "scripts": {
     "start": "echo \"example folder contains sample app (see README)\" && exit 1",
     "test": "echo \"example folder contains the tests (see README)\" && exit 1",
-    "lint": "eslint CalendarPicker --fix",
+    "lint": "eslint MyCalendarPicker --fix",
     "postinstall": "node-git-hooks"
   },
   "keywords": [
@@ -26,16 +26,6 @@
     "picker",
     "day",
     "picker"
-  ],
-  "author": {
-    "name": "Stephani Alves",
-    "email": "alves@stephanimoroni.com"
-  },
-  "maintainers": [
-    {
-      "name": "stephy",
-      "email": "alves@stephanimoroni.com"
-    }
   ],
   "directories": {},
   "dependencies": {

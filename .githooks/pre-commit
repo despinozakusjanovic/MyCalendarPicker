@@ -1,2 +1,2 @@
 #!/bin/sh
-./node_modules/.bin/eslint CalendarPicker
+./node_modules/.bin/eslint MyCalendarPicker

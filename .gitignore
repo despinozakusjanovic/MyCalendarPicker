@@ -7,7 +7,7 @@ package-lock.json
 node_modules/**/*
 
 example/node_modules/
-example/CalendarPicker/
+example/MyCalendarPicker/
 example/package-lock.json
 
 # Xcode
